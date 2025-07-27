@@ -88,7 +88,7 @@ class TomatoApp {
             Restaurant* restaurant = userCart->getRestaurant();
             vector<MenuItem> itemsOrdered = userCart->getItems();
             double totalCost = userCart->getTotalCost();
-            cout<< "Total Cost: $" << totalCost << endl;
+            
             Order* order = orderFactory->createOrder(user, userCart, restaurant, itemsOrdered, paymentStrategy, orderType);
             OrderManager::getInstance()->addOrder(order);
             return order;
